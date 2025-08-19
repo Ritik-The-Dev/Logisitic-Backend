@@ -1,0 +1,2404 @@
+{
+	"info": {
+		"_postman_id": "0af5b65c-7c73-4a48-ba7a-1db533a36e08",
+		"name": "Logistic",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "28923677",
+		"_collection_link": "https://lunar-water-322054.postman.co/workspace/Team-Workspace~2d46a67c-1e1e-4a7e-8a25-d7d1a93d4b07/collection/28923677-0af5b65c-7c73-4a48-ba7a-1db533a36e08?action=share&source=collection_link&creator=28923677"
+	},
+	"item": [
+		{
+			"name": "Application",
+			"item": [
+				{
+					"name": "Authentiation",
+					"item": [
+						{
+							"name": "Login with OTP",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"contact_no\": 8383813137,\n    \"verification_code\": 123456,\n    \"name\": \"test\",\n    \"fcm_token\": \"fqtCz4HnR3G3WBKGkvVG_G:APA91bG0gp2D19e0WRLQ9R_Z3pjPmRhRjvLASKt5xDbGFAcmB6XsI0eAJMpmd_wErZKIZnHxzowhiRgsJ2l6OMY2v32PAQzvjwa0_fs9amF2CuE9auY0mjk\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{BASE_URL}}/apps/login",
+									"host": [
+										"{{BASE_URL}}"
+									],
+									"path": [
+										"apps",
+										"login"
+									]
+								},
+								"description": "Generated from cURL: curl --location --request POST 'http://localhost:5000/api/users/login' \\\n--header 'Content-Type: application/json' \\\n--data-raw '{\n    \"identifier\": \"john@example.com\", \n    \"password\": \"Test@1234\"\n}'\n"
+							},
+							"response": []
+						},
+						{
+							"name": "Login with Google",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"idToken\": \"eyJhbGciOiJSUzI1NiIsImtpZCI6IjFiYjc3NGJkODcyOWVhMzhlOWMyZmUwYzY0ZDJjYTk0OGJmNjZmMGYiLCJ0eXAiOiJKV1QifQ.eyJpc3MiOiJodHRwczovL2FjY291bnRzLmdvb2dsZS5jb20iLCJhenAiOiIxMDg4ODM1Njg0MTE4LWplcXYwNWltc2M5ZWwzNnFnZGFxcm9mNHVnYTF0cHZqLmFwcHMuZ29vZ2xldXNlcmNvbnRlbnQuY29tIiwiYXVkIjoiMTA4ODgzNTY4NDExOC1uN3FqdTI4azlpM2pjNGp2dHR0azNydmVpaTE1NzJlNS5hcHBzLmdvb2dsZXVzZXJjb250ZW50LmNvbSIsInN1YiI6IjExMTY2NzEyMDA3MDIwOTE5OTMzOCIsImVtYWlsIjoic3BpZGVyNzQwOTEzQGdtYWlsLmNvbSIsImVtYWlsX3ZlcmlmaWVkIjp0cnVlLCJuYW1lIjoiUm9oaXQiLCJwaWN0dXJlIjoiaHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EvQUNnOG9jS29pWjlPVjBOVUU5TWROZHJ4Mi1vZFd1eWlCOEZZRnZQb2pWb0FCZENEd3dTZHlBPXM5Ni1jIiwiZ2l2ZW5fbmFtZSI6IlJvaGl0IiwiaWF0IjoxNzUwNDg2MTM5LCJleHAiOjE3NTA0ODk3Mzl9.JeVn7HJ3eHkajVxjdlfzcU2ApMxTc2t8FU0uXkKLkwH-vuRbs6N5Ye03mUVHppHJur0wMJEntwZmcA0D12vArYdYmuVFW095LxkLldA_w3nvTZQ3Faec7Dsfgq7nAMWLl7w-bJLVOqpPJz2Zkmptx348px68Uyd0zHjV8Bh6hF86VplEmztOfowCc5fwDIS-mvSzd0-MA0gqgIRVOPJnzG6NqY_epud2_O4ywQGN_FNfXVDBoGkuAt0CLYcLWduguknS3fvIg-71HAY3wu8nd3YW0VjKxFibKniWElJXQJiwuZAu20g0oBjQG35oDw2z1xjGWDti8vYTvmYHh2YAGw\",\n    \"scopes\": [\n        \"https://www.googleapis.com/auth/userinfo.profile\",\n        \"https://www.googleapis.com/auth/userinfo.email\",\n        \"openid\",\n        \"profile\",\n        \"email\"\n    ],\n    \"serverAuthCode\": null,\n    \"user\": {\n        \"email\": \"spider740913@gmail.com\",\n        \"familyName\": null,\n        \"givenName\": \"Rohit\",\n        \"id\": \"111667120070209199338\",\n        \"name\": \"Rohit\",\n        \"photo\": \"https://lh3.googleusercontent.com/a/ACg8ocKoiZ9OV0NUE9MdNdrx2-odWuyiB8FYFvPojVoABdCDwwSdyA=s96-c\"\n    }\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{BASE_URL}}/apps/google/login",
+									"host": [
+										"{{BASE_URL}}"
+									],
+									"path": [
+										"apps",
+										"google",
+										"login"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Trip",
+					"item": [
+						{
+							"name": "Create Trip",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{TOKEN}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"distance\": 5000,\n    \"user\": \"{{USER}}\",\n    \"trip_cost\": 450,\n    \"from\": \"Location A\",\n    \"to\": \"Location B\",\n    \"material\": \"{{MATERIAL_BOX_ID}}\",\n    \"material_unit\": \"Kg\",\n    \"weight\": 5,\n    \"alternate_contact_no\": \"9876543211\",\n    \"assisstant\": 2,\n    \"vehicle_type\": \"{{VEHICLE_TYPE_ID}}\",\n    \"eta_pickup\": \"2024-10-21\",\n    \"from_latitude\": 48.8566,\n    \"from_longitude\": 2.3522,\n    \"to_latitude\": 48.8606,\n    \"to_longitude\": 2.3376,\n    \"app_charges\": 30,\n    \"customer_freight\": 450,\n    \"driver_freight\": 420,\n    \"total_toll_tax_amount\": 0,\n    \"total_tolls\": []\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{BASE_URL}}/apps/trip",
+									"host": [
+										"{{BASE_URL}}"
+									],
+									"path": [
+										"apps",
+										"trip"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Nearby Drivers",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{TOKEN}}",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{BASE_URL}}/apps/trip/nearby-drivers?latitude=40.7128&longitude=-74.0060&maxDistance=10",
+									"host": [
+										"{{BASE_URL}}"
+									],
+									"path": [
+										"apps",
+										"trip",
+										"nearby-drivers"
+									],
+									"query": [
+										{
+											"key": "latitude",
+											"value": "40.7128"
+										},
+										{
+											"key": "longitude",
+											"value": "-74.0060"
+										},
+										{
+											"key": "maxDistance",
+											"value": "10"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Retry Drivers",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{TOKEN}}",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{BASE_URL}}/apps/trip/retry/{{TRIP_ID}}",
+									"host": [
+										"{{BASE_URL}}"
+									],
+									"path": [
+										"apps",
+										"trip",
+										"retry",
+										"{{TRIP_ID}}"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Driver Reminder",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{TOKEN}}",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{BASE_URL}}/apps/trip/reminder",
+									"host": [
+										"{{BASE_URL}}"
+									],
+									"path": [
+										"apps",
+										"trip",
+										"reminder"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Update Trip response",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{DRIVER_TOKEN}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"trip_id\": \"{{TRIP_ID}}\",\n    \"response\": \"accept\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{BASE_URL}}/apps/trip/respond",
+									"host": [
+										"{{BASE_URL}}"
+									],
+									"path": [
+										"apps",
+										"trip",
+										"respond"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Update Trip",
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{TOKEN}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"alternate_contact_no\": \"9876543213\",\n    \"status\": \"in_transit\",\n    \"assisstant\": 4,\n    \"vehicle_details\": \"{{VEHICLE_ID}}\",\n    \"from_latitude\": 52.5200,\n    \"from_longitude\": 13.4050,\n    \"to_latitude\": 52.5163,\n    \"to_longitude\": 13.3777,\n    \"app_charges\": 30,\n    \"customer_freight\": 450,\n    \"driver_freight\": 420,\n    \"total_toll_tax_amount\": 0,\n    \"total_tolls\": []\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{BASE_URL}}/apps/trip/{{TRIP_ID}}",
+									"host": [
+										"{{BASE_URL}}"
+									],
+									"path": [
+										"apps",
+										"trip",
+										"{{TRIP_ID}}"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Fetch Trips for admin",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{TOKEN}}",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{BASE_URL}}/apps/trip?limit=10&tab=booking",
+									"host": [
+										"{{BASE_URL}}"
+									],
+									"path": [
+										"apps",
+										"trip"
+									],
+									"query": [
+										{
+											"key": "limit",
+											"value": "10"
+										},
+										{
+											"key": "tab",
+											"value": "booking"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Single Trip",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{TOKEN}}",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{BASE_URL}}/apps/trip/{{TRIP_ID}}",
+									"host": [
+										"{{BASE_URL}}"
+									],
+									"path": [
+										"apps",
+										"trip",
+										"{{TRIP_ID}}"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Delete Trip",
+							"request": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{TOKEN}}",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{BASE_URL}}/apps/trip/{{TRIP_ID}}",
+									"host": [
+										"{{BASE_URL}}"
+									],
+									"path": [
+										"apps",
+										"trip",
+										"{{TRIP_ID}}"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Fetch Trips for Application",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{ADMIN_TOKEN}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "comment_: These are extra parameter for filter data. if user and driver than same id will be passed in user and driver_id fro fetch accepted or rejected trips of that driver.\ndriver_id=684a612fec8cdf10c246e427\ndriver_response=accepted\nvehicle_details=<vehicle id>\ntrip_status=scheduled\n\n",
+									"options": {
+										"raw": {
+											"language": "text"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{BASE_URL}}/apps/trip/custom-search?user={{USER}}&limit=100&tab=booking",
+									"host": [
+										"{{BASE_URL}}"
+									],
+									"path": [
+										"apps",
+										"trip",
+										"custom-search"
+									],
+									"query": [
+										{
+											"key": "user",
+											"value": "{{USER}}"
+										},
+										{
+											"key": "limit",
+											"value": "100"
+										},
+										{
+											"key": "tab",
+											"value": "booking"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Test Notification",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{ADMIN_TOKEN}}",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{BASE_URL}}/apps/trip/test-notification?id={{USER}}",
+									"host": [
+										"{{BASE_URL}}"
+									],
+									"path": [
+										"apps",
+										"trip",
+										"test-notification"
+									],
+									"query": [
+										{
+											"key": "id",
+											"value": "{{USER}}"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Trip Created By ADMIN",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{ADMIN_TOKEN}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"distance\": 5000,\n    \"user\": \"{{USER}}\",\n    \"trip_cost\": 450,\n    \"from\": \"Location A\",\n    \"to\": \"Location B\",\n    \"material\": \"{{MATERIAL_BOX_ID}}\",\n    \"material_unit\": \"Kg\",\n    \"weight\": 5,\n    \"material_width\": 40,\n    \"material_height\": 20,\n    \"alternate_contact_no\": \"9876543211\",\n    \"assisstant\": 2,\n    \"vehicle_type\": \"{{VEHICLE_TYPE_ID}}\",\n    \"eta_pickup\": \"2024-10-21\",\n    \"from_latitude\": 48.8566,\n    \"from_longitude\": 2.3522,\n    \"to_latitude\": 48.8606,\n    \"to_longitude\": 2.3376,\n    \"app_charges\": 30,\n    \"customer_freight\": 450,\n    \"driver_freight\": 420,\n    \"total_toll_tax_amount\": 0,\n    \"total_tolls\": []\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{BASE_URL}}/apps/trip/admin",
+									"host": [
+										"{{BASE_URL}}"
+									],
+									"path": [
+										"apps",
+										"trip",
+										"admin"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Driver Location",
+					"item": [
+						{
+							"name": "Create Driver Location",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{TOKEN}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"latitude\": 35.6850,\n    \"user\": \"{{USER}}\",\n    \"longitude\": 139.6900\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{BASE_URL}}/apps/driver_location",
+									"host": [
+										"{{BASE_URL}}"
+									],
+									"path": [
+										"apps",
+										"driver_location"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Update Driver Location",
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{TOKEN}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"latitude\": 51.5100,\n    \"user\": \"{{USER}}\",\n    \"longitude\": -0.1350\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{BASE_URL}}/apps/driver_location/{{DRIVER_LOCATION_ID}}",
+									"host": [
+										"{{BASE_URL}}"
+									],
+									"path": [
+										"apps",
+										"driver_location",
+										"{{DRIVER_LOCATION_ID}}"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Fetch Driver Locations",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{TOKEN}}",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{BASE_URL}}/apps/driver_location?user={{USER}}",
+									"host": [
+										"{{BASE_URL}}"
+									],
+									"path": [
+										"apps",
+										"driver_location"
+									],
+									"query": [
+										{
+											"key": "user",
+											"value": "{{USER}}"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Single Driver Location",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{TOKEN}}",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{BASE_URL}}/apps/driver_location/{{DRIVER_LOCATION_ID}}",
+									"host": [
+										"{{BASE_URL}}"
+									],
+									"path": [
+										"apps",
+										"driver_location",
+										"{{DRIVER_LOCATION_ID}}"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Delete Driver Location",
+							"request": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{TOKEN}}",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{BASE_URL}}/apps/driver_location/{{DRIVER_LOCATION_ID}}",
+									"host": [
+										"{{BASE_URL}}"
+									],
+									"path": [
+										"apps",
+										"driver_location",
+										"{{DRIVER_LOCATION_ID}}"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Vehicle",
+					"item": [
+						{
+							"name": "Vehicle",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{TOKEN}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "vehicle_type",
+											"value": "{{VEHICLE_TYPE_ID}}",
+											"type": "text"
+										},
+										{
+											"key": "vehicle_no",
+											"value": "DL01AB5464",
+											"type": "text"
+										},
+										{
+											"key": "user",
+											"value": "{{USER}}",
+											"type": "text"
+										},
+										{
+											"key": "driving_licence_no",
+											"value": "DL56784ID45678",
+											"type": "text"
+										},
+										{
+											"key": "puc_certificate_no",
+											"value": "POL768778JJ",
+											"type": "text"
+										},
+										{
+											"key": "insurance_no",
+											"value": "NAT6655559",
+											"type": "text"
+										},
+										{
+											"key": "driving_licence",
+											"type": "file",
+											"src": "postman-cloud:///1eff46fd-ad2f-43e0-8158-4e746a158d27"
+										},
+										{
+											"key": "insurance",
+											"type": "file",
+											"src": "postman-cloud:///1f00c04a-890a-46a0-836f-95e268c26411"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{BASE_URL}}/apps/vehicle",
+									"host": [
+										"{{BASE_URL}}"
+									],
+									"path": [
+										"apps",
+										"vehicle"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Admin",
+			"item": [
+				{
+					"name": "Authentication",
+					"item": [
+						{
+							"name": "Admin Email Login",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"email\": \"pawan@yopmail.com\", \n    \"password\": \"Pawan@1234\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{BASE_URL}}/auth/login",
+									"host": [
+										"{{BASE_URL}}"
+									],
+									"path": [
+										"auth",
+										"login"
+									]
+								},
+								"description": "Generated from cURL: curl --location --request POST 'http://localhost:5000/api/users/login' \\\n--header 'Content-Type: application/json' \\\n--data-raw '{\n    \"identifier\": \"john@example.com\", \n    \"password\": \"Test@1234\"\n}'\n"
+							},
+							"response": []
+						},
+						{
+							"name": "Customer Email Login",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"email\": \"rimanshu@yopmail.com\", \n    \"password\": \"Test@1234\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{BASE_URL}}/auth/login",
+									"host": [
+										"{{BASE_URL}}"
+									],
+									"path": [
+										"auth",
+										"login"
+									]
+								},
+								"description": "Generated from cURL: curl --location --request POST 'http://localhost:5000/api/users/login' \\\n--header 'Content-Type: application/json' \\\n--data-raw '{\n    \"identifier\": \"john@example.com\", \n    \"password\": \"Test@1234\"\n}'\n"
+							},
+							"response": []
+						},
+						{
+							"name": "Driver Email Login",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"email\": \"john@yopmail.com\", \n    \"password\": \"John@1234\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{BASE_URL}}/auth/login",
+									"host": [
+										"{{BASE_URL}}"
+									],
+									"path": [
+										"auth",
+										"login"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get Access token by Refresh Token",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"refresh_token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InBhd2FuQHlvcG1haWwuY29tIiwidHlwZSI6ImFkbWluIiwiaWF0IjoxNzQ4MzY2NjEyLCJleHAiOjE3NDg1Mzk0MTJ9.ddsCkYavAC6jxOFzTWSkVTa_Z7LZHdr3tEiM3O1OLcE\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{BASE_URL}}/auth/access_token",
+									"host": [
+										"{{BASE_URL}}"
+									],
+									"path": [
+										"auth",
+										"access_token"
+									]
+								},
+								"description": "Generated from cURL: curl --location --request POST 'http://localhost:5000/api/users/login' \\\n--header 'Content-Type: application/json' \\\n--data-raw '{\n    \"identifier\": \"john@example.com\", \n    \"password\": \"Test@1234\"\n}'\n"
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "User",
+					"item": [
+						{
+							"name": "Admin",
+							"item": [
+								{
+									"name": "Create Admin",
+									"request": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"username\": \"Pawan\",\n    \"email\": \"pawan@yopmdddail.com\",\n    \"fullname\": \"Pawan Sharma\",\n    \"name\": \"Pawan\",\n    \"postal_code\": \"123456\",\n    \"contact_no\": \"9876543210\",\n    \"profile\": \"https://example.com/profile.jpg\",\n    \"password\": \"Pawan@1234\",\n    \"type\": \"admin\",\n    \"terms_conditions\": true\n}"
+										},
+										"url": {
+											"raw": "{{BASE_URL}}/admins",
+											"host": [
+												"{{BASE_URL}}"
+											],
+											"path": [
+												"admins"
+											]
+										},
+										"description": "Generated from cURL: curl --location --request POST 'http://localhost:5000/api/users' \\\n--header 'Content-Type: application/json' \\\n--data-raw '{\n    \"username\": \"john_doe\",\n    \"email\": \"john@example.com\",\n    \"fullname\": \"Johnathan Doe\",\n    \"name\": \"John\",\n    \"postal_code\": \"123456\",\n    \"contact_no\": \"9876543210\",\n    \"profile\": \"https://example.com/profile.jpg\",\n    \"password\": \"Test@1234\",\n    \"type\": \"customer\",\n    \"terms_conditions\": true\n}'\n"
+									},
+									"response": []
+								},
+								{
+									"name": "Upload Image",
+									"request": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											},
+											{
+												"key": "authorization",
+												"value": "{{ADMIN_TOKEN}}",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "formdata",
+											"formdata": [
+												{
+													"key": "image",
+													"type": "file",
+													"src": "postman-cloud:///1eff46fd-ad2f-43e0-8158-4e746a158d27"
+												}
+											]
+										},
+										"url": {
+											"raw": "{{BASE_URL}}/admins/upload",
+											"host": [
+												"{{BASE_URL}}"
+											],
+											"path": [
+												"admins",
+												"upload"
+											]
+										},
+										"description": "Generated from cURL: curl --location --request POST 'http://localhost:5000/api/users' \\\n--header 'Content-Type: application/json' \\\n--data-raw '{\n    \"username\": \"john_doe\",\n    \"email\": \"john@example.com\",\n    \"fullname\": \"Johnathan Doe\",\n    \"name\": \"John\",\n    \"postal_code\": \"123456\",\n    \"contact_no\": \"9876543210\",\n    \"profile\": \"https://example.com/profile.jpg\",\n    \"password\": \"Test@1234\",\n    \"type\": \"customer\",\n    \"terms_conditions\": true\n}'\n"
+									},
+									"response": []
+								},
+								{
+									"name": "Update Admin",
+									"request": {
+										"method": "PUT",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											},
+											{
+												"key": "authorization",
+												"value": "{{ADMIN_TOKEN}}",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"profile\": \"http://localhost:5465/storage/admin/1749975727655_1740594376121-IMG_0519.jpg\"\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{BASE_URL}}/admins/684c57c457c7fd41075aa27f",
+											"host": [
+												"{{BASE_URL}}"
+											],
+											"path": [
+												"admins",
+												"684c57c457c7fd41075aa27f"
+											]
+										},
+										"description": "Generated from cURL: curl --location --request PUT 'http://localhost:5000/api/users/USER_ID_HERE' \\\n--header 'Content-Type: application/json' \\\n--data-raw '{\n    \"username\": \"john_updated\",\n    \"email\": \"john_updated@example.com\",\n    \"fullname\": \"John Updated\",\n    \"name\": \"Johnny\",\n    \"postal_code\": \"654321\",\n    \"contact_no\": \"9876500000\",\n    \"profile\": \"https://example.com/profile-new.jpg\",\n    \"password\": \"NewPass@1234\",\n    \"type\": \"driver\",\n    \"terms_conditions\": true\n}'\n"
+									},
+									"response": []
+								},
+								{
+									"name": "Fetch All Admin & User With Search",
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "authorization",
+												"value": "{{ADMIN_TOKEN}}",
+												"type": "text"
+											}
+										],
+										"url": {
+											"raw": "{{BASE_URL}}/admins/users?search=&page=&limit=&role=",
+											"host": [
+												"{{BASE_URL}}"
+											],
+											"path": [
+												"admins",
+												"users"
+											],
+											"query": [
+												{
+													"key": "search",
+													"value": ""
+												},
+												{
+													"key": "page",
+													"value": ""
+												},
+												{
+													"key": "limit",
+													"value": ""
+												},
+												{
+													"key": "role",
+													"value": ""
+												}
+											]
+										},
+										"description": "Generated from cURL: curl --location --request GET 'http://localhost:5000/api/users'\n"
+									},
+									"response": []
+								},
+								{
+									"name": "Fetch Single Admin",
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "authorization",
+												"value": "{{ADMIN_TOKEN}}",
+												"type": "text"
+											}
+										],
+										"url": {
+											"raw": "{{BASE_URL}}/admins/6831917f86cdf06aff5c23a9",
+											"host": [
+												"{{BASE_URL}}"
+											],
+											"path": [
+												"admins",
+												"6831917f86cdf06aff5c23a9"
+											]
+										},
+										"description": "Generated from cURL: curl --location --request GET 'http://localhost:5000/api/users/USER_ID_HERE'\n"
+									},
+									"response": []
+								},
+								{
+									"name": "Delete Admin",
+									"request": {
+										"method": "DELETE",
+										"header": [
+											{
+												"key": "authorization",
+												"value": "{{ADMIN_TOKEN}}",
+												"type": "text"
+											}
+										],
+										"url": {
+											"raw": "{{BASE_URL}}/admins/6831917f86cdf06aff5c23a9",
+											"host": [
+												"{{BASE_URL}}"
+											],
+											"path": [
+												"admins",
+												"6831917f86cdf06aff5c23a9"
+											]
+										},
+										"description": "Generated from cURL: curl --location --request DELETE 'http://localhost:5000/api/users/USER_ID_HERE'\n"
+									},
+									"response": []
+								}
+							]
+						},
+						{
+							"name": "Driver",
+							"item": [
+								{
+									"name": "Create Driver",
+									"request": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"username\": \"john_doe\",\n    \"email\": \"john@yopmail.com\",\n    \"fullname\": \"Johnathan Doe\",\n    \"name\": \"John\",\n    \"postal_code\": \"123456\",\n    \"contact_no\": \"9876543210\",\n    \"profile\": \"https://example.com/profile.jpg\",\n    \"password\": \"John@1234\",\n    \"type\": \"driver\",\n    \"terms_conditions\": true\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{BASE_URL}}/users",
+											"host": [
+												"{{BASE_URL}}"
+											],
+											"path": [
+												"users"
+											]
+										},
+										"description": "Generated from cURL: curl --location --request POST 'http://localhost:5000/api/users' \\\n--header 'Content-Type: application/json' \\\n--data-raw '{\n    \"username\": \"john_doe\",\n    \"email\": \"john@example.com\",\n    \"fullname\": \"Johnathan Doe\",\n    \"name\": \"John\",\n    \"postal_code\": \"123456\",\n    \"contact_no\": \"9876543210\",\n    \"profile\": \"https://example.com/profile.jpg\",\n    \"password\": \"Test@1234\",\n    \"type\": \"customer\",\n    \"terms_conditions\": true\n}'\n"
+									},
+									"response": []
+								},
+								{
+									"name": "Update Driver",
+									"request": {
+										"method": "PUT",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											},
+											{
+												"key": "authorization",
+												"value": "{{TOKEN}}",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"username\": \"john\",\n    \"email\": \"john@yopmail.com\",\n    \"fullname\": \"John\",\n    \"name\": \"Johnny\",\n    \"postal_code\": \"654321\",\n    \"contact_no\": \"9876500000\",\n    \"profile\": \"https://example.com/profile-new.jpg\",\n    \"password\": \"Test@1234\",\n    \"availability\": \"online\",\n    \"terms_conditions\": true\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{BASE_URL}}/users/68318c3b072e92e3a96c6c9b",
+											"host": [
+												"{{BASE_URL}}"
+											],
+											"path": [
+												"users",
+												"68318c3b072e92e3a96c6c9b"
+											]
+										},
+										"description": "Generated from cURL: curl --location --request PUT 'http://localhost:5000/api/users/USER_ID_HERE' \\\n--header 'Content-Type: application/json' \\\n--data-raw '{\n    \"username\": \"john_updated\",\n    \"email\": \"john_updated@example.com\",\n    \"fullname\": \"John Updated\",\n    \"name\": \"Johnny\",\n    \"postal_code\": \"654321\",\n    \"contact_no\": \"9876500000\",\n    \"profile\": \"https://example.com/profile-new.jpg\",\n    \"password\": \"NewPass@1234\",\n    \"type\": \"driver\",\n    \"terms_conditions\": true\n}'\n"
+									},
+									"response": []
+								},
+								{
+									"name": "Fetch Single Driver",
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "authorization",
+												"value": "{{TOKEN}}",
+												"type": "text"
+											}
+										],
+										"url": {
+											"raw": "{{BASE_URL}}/users/68318c3b072e92e3a96c6c9b",
+											"host": [
+												"{{BASE_URL}}"
+											],
+											"path": [
+												"users",
+												"68318c3b072e92e3a96c6c9b"
+											]
+										},
+										"description": "Generated from cURL: curl --location --request GET 'http://localhost:5000/api/users/USER_ID_HERE'\n"
+									},
+									"response": []
+								},
+								{
+									"name": "Delete Driver",
+									"request": {
+										"method": "DELETE",
+										"header": [
+											{
+												"key": "authorization",
+												"value": "{{TOKEN}}",
+												"type": "text"
+											}
+										],
+										"url": {
+											"raw": "{{BASE_URL}}/users/68665c1b0c70d38081fa4001",
+											"host": [
+												"{{BASE_URL}}"
+											],
+											"path": [
+												"users",
+												"68665c1b0c70d38081fa4001"
+											]
+										},
+										"description": "Generated from cURL: curl --location --request DELETE 'http://localhost:5000/api/users/USER_ID_HERE'\n"
+									},
+									"response": []
+								}
+							]
+						},
+						{
+							"name": "User as Customer",
+							"item": [
+								{
+									"name": "Create Customer",
+									"request": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"username\": \"rimanshu\",\n    \"email\": \"rimanshu@yopmail.com\",\n    \"fullname\": \"Rimanshu Sharma\",\n    \"name\": \"Rimanshu\",\n    \"postal_code\": \"123456\",\n    \"contact_no\": \"9876543210\",\n    \"profile\": \"https://example.com/profile.jpg\",\n    \"password\": \"Test@1234\",\n    \"type\": \"customer\",\n    \"terms_conditions\": true\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{BASE_URL}}/users",
+											"host": [
+												"{{BASE_URL}}"
+											],
+											"path": [
+												"users"
+											]
+										},
+										"description": "Generated from cURL: curl --location --request POST 'http://localhost:5000/api/users' \\\n--header 'Content-Type: application/json' \\\n--data-raw '{\n    \"username\": \"john_doe\",\n    \"email\": \"john@example.com\",\n    \"fullname\": \"Johnathan Doe\",\n    \"name\": \"John\",\n    \"postal_code\": \"123456\",\n    \"contact_no\": \"9876543210\",\n    \"profile\": \"https://example.com/profile.jpg\",\n    \"password\": \"Test@1234\",\n    \"type\": \"customer\",\n    \"terms_conditions\": true\n}'\n"
+									},
+									"response": []
+								},
+								{
+									"name": "Upload Image",
+									"request": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											},
+											{
+												"key": "authorization",
+												"value": "{{TOKEN}}",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "formdata",
+											"formdata": [
+												{
+													"key": "image",
+													"type": "file",
+													"src": "postman-cloud:///1eff46fd-ad2f-43e0-8158-4e746a158d27"
+												}
+											]
+										},
+										"url": {
+											"raw": "{{BASE_URL}}/users/upload",
+											"host": [
+												"{{BASE_URL}}"
+											],
+											"path": [
+												"users",
+												"upload"
+											]
+										},
+										"description": "Generated from cURL: curl --location --request POST 'http://localhost:5000/api/users' \\\n--header 'Content-Type: application/json' \\\n--data-raw '{\n    \"username\": \"john_doe\",\n    \"email\": \"john@example.com\",\n    \"fullname\": \"Johnathan Doe\",\n    \"name\": \"John\",\n    \"postal_code\": \"123456\",\n    \"contact_no\": \"9876543210\",\n    \"profile\": \"https://example.com/profile.jpg\",\n    \"password\": \"Test@1234\",\n    \"type\": \"customer\",\n    \"terms_conditions\": true\n}'\n"
+									},
+									"response": []
+								},
+								{
+									"name": "Update Customer",
+									"request": {
+										"method": "PUT",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											},
+											{
+												"key": "authorization",
+												"value": "{{TOKEN}}",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"username\": \"rimanshu\",\n    \"email\": \"rimanshu@yopmail.com\",\n    \"fullname\": \"Rimanshu Sharma\",\n    \"name\": \"Rimanshu\",\n    \"postal_code\": \"123456\",\n    \"contact_no\": \"9876543210\",\n    \"profile\": \"https://example.com/profile.jpg\",\n    \"password\": \"Test@1234\",\n    \"type\": \"customer\",\n    \"terms_conditions\": true\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{BASE_URL}}/users/683196fc8e604ed3059b1e2e",
+											"host": [
+												"{{BASE_URL}}"
+											],
+											"path": [
+												"users",
+												"683196fc8e604ed3059b1e2e"
+											]
+										},
+										"description": "Generated from cURL: curl --location --request PUT 'http://localhost:5000/api/users/USER_ID_HERE' \\\n--header 'Content-Type: application/json' \\\n--data-raw '{\n    \"username\": \"john_updated\",\n    \"email\": \"john_updated@example.com\",\n    \"fullname\": \"John Updated\",\n    \"name\": \"Johnny\",\n    \"postal_code\": \"654321\",\n    \"contact_no\": \"9876500000\",\n    \"profile\": \"https://example.com/profile-new.jpg\",\n    \"password\": \"NewPass@1234\",\n    \"type\": \"driver\",\n    \"terms_conditions\": true\n}'\n"
+									},
+									"response": []
+								},
+								{
+									"name": "Fetch Customer",
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "authorization",
+												"value": "{{TOKEN}}",
+												"type": "text"
+											}
+										],
+										"url": {
+											"raw": "{{BASE_URL}}/users/{{USER}}",
+											"host": [
+												"{{BASE_URL}}"
+											],
+											"path": [
+												"users",
+												"{{USER}}"
+											]
+										},
+										"description": "Generated from cURL: curl --location --request GET 'http://localhost:5000/api/users/USER_ID_HERE'\n"
+									},
+									"response": []
+								},
+								{
+									"name": "Fetch Vehicle Documents by User ID",
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "authorization",
+												"value": "{{TOKEN}}",
+												"type": "text"
+											}
+										],
+										"url": {
+											"raw": "{{BASE_URL}}/users/{{USER}}/vehicle",
+											"host": [
+												"{{BASE_URL}}"
+											],
+											"path": [
+												"users",
+												"{{USER}}",
+												"vehicle"
+											]
+										},
+										"description": "Generated from cURL: curl --location --request GET 'http://localhost:5000/api/users/USER_ID_HERE'\n"
+									},
+									"response": []
+								},
+								{
+									"name": "Delete Customer",
+									"request": {
+										"method": "DELETE",
+										"header": [
+											{
+												"key": "authorization",
+												"value": "{{TOKEN}}",
+												"type": "text"
+											}
+										],
+										"url": {
+											"raw": "{{BASE_URL}}/users/683196fc8e604ed3059b1e2e",
+											"host": [
+												"{{BASE_URL}}"
+											],
+											"path": [
+												"users",
+												"683196fc8e604ed3059b1e2e"
+											]
+										},
+										"description": "Generated from cURL: curl --location --request DELETE 'http://localhost:5000/api/users/USER_ID_HERE'\n"
+									},
+									"response": []
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Vehicle type",
+			"item": [
+				{
+					"name": "Create Vehicle Type",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{TOKEN}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "Truck",
+									"type": "text"
+								},
+								{
+									"key": "wheeler",
+									"value": "6",
+									"type": "text"
+								},
+								{
+									"key": "capacity",
+									"value": "5000",
+									"type": "text"
+								},
+								{
+									"key": "unit",
+									"value": "kg",
+									"type": "text"
+								},
+								{
+									"key": "base_fare",
+									"value": "100",
+									"type": "text"
+								},
+								{
+									"key": "km_fare",
+									"value": "15",
+									"type": "text"
+								},
+								{
+									"key": "base_fare_margin",
+									"value": "10.5",
+									"type": "text"
+								},
+								{
+									"key": "km_fare_margin",
+									"value": "2",
+									"type": "text"
+								},
+								{
+									"key": "vehicle_image",
+									"type": "file",
+									"src": "postman-cloud:///1eff46fd-ad2f-43e0-8158-4e746a158d27"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{BASE_URL}}/vehicle_type",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"vehicle_type"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Vehicle Type",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{TOKEN}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "Medium Truck",
+									"type": "text"
+								},
+								{
+									"key": "wheeler",
+									"value": "6",
+									"type": "text"
+								},
+								{
+									"key": "unit",
+									"value": "kg",
+									"type": "text"
+								},
+								{
+									"key": "base_fare",
+									"value": "80",
+									"type": "text"
+								},
+								{
+									"key": "km_fare",
+									"value": "20",
+									"type": "text"
+								},
+								{
+									"key": "base_fare_margin",
+									"value": "10",
+									"type": "text"
+								},
+								{
+									"key": "user",
+									"value": "{{USER}}",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{BASE_URL}}/vehicle_type/{{VEHICLE_TYPE_ID}}",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"vehicle_type",
+								"{{VEHICLE_TYPE_ID}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Fetch Vehicles types",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{TOKEN}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{BASE_URL}}/vehicle_type?search=&page=&limit=&weight=5",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"vehicle_type"
+							],
+							"query": [
+								{
+									"key": "search",
+									"value": ""
+								},
+								{
+									"key": "page",
+									"value": ""
+								},
+								{
+									"key": "limit",
+									"value": ""
+								},
+								{
+									"key": "weight",
+									"value": "5"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Fetch Vehicles drivers",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{TOKEN}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{BASE_URL}}/vehicle_type/drivers?type=customer",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"vehicle_type",
+								"drivers"
+							],
+							"query": [
+								{
+									"key": "type",
+									"value": "customer"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Single Vehicle type",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{TOKEN}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{BASE_URL}}/vehicle_type/{{VEHICLE_TYPE_ID}}",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"vehicle_type",
+								"{{VEHICLE_TYPE_ID}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Vehicle Type",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{TOKEN}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{BASE_URL}}/vehicle_type/{{VEHICLE_TYPE_ID}}",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"vehicle_type",
+								"{{VEHICLE_TYPE_ID}}"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Vehicle",
+			"item": [
+				{
+					"name": "Create Vehicle",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "{{TOKEN}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "vehicle_image",
+									"type": "file",
+									"src": "postman-cloud:///1eff1bd3-5b45-4b60-9fba-4e8b3977b95d"
+								},
+								{
+									"key": "vehicle_type",
+									"value": "{{VEHICLE_TYPE_ID}}",
+									"type": "text"
+								},
+								{
+									"key": "vehicle_no",
+									"value": "DL01AB1234",
+									"type": "text"
+								},
+								{
+									"key": "weight",
+									"value": "20000",
+									"type": "text"
+								},
+								{
+									"key": "length",
+									"value": "20ft",
+									"type": "text"
+								},
+								{
+									"key": "width",
+									"value": "8ft",
+									"type": "text"
+								},
+								{
+									"key": "height",
+									"value": "9ft",
+									"type": "text"
+								},
+								{
+									"key": "status",
+									"value": "active",
+									"type": "text"
+								},
+								{
+									"key": "user",
+									"value": "{{USER}}",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{BASE_URL}}/vehicle",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"vehicle"
+							]
+						},
+						"description": "Generated from cURL: curl --location --request POST 'http://localhost:5000/api/users' \\\n--header 'Content-Type: application/json' \\\n--data-raw '{\n    \"username\": \"john_doe\",\n    \"email\": \"john@example.com\",\n    \"fullname\": \"Johnathan Doe\",\n    \"name\": \"John\",\n    \"postal_code\": \"123456\",\n    \"contact_no\": \"9876543210\",\n    \"profile\": \"https://example.com/profile.jpg\",\n    \"password\": \"Test@1234\",\n    \"type\": \"customer\",\n    \"terms_conditions\": true\n}'\n"
+					},
+					"response": []
+				},
+				{
+					"name": "Update Vehicle",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "authorization",
+								"value": "{{TOKEN}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "vehicle_no",
+									"value": "DL01AB4444",
+									"type": "text"
+								},
+								{
+									"key": "status",
+									"value": "active",
+									"type": "text"
+								},
+								{
+									"key": "vehicle_image",
+									"type": "file",
+									"src": "postman-cloud:///1f00c04a-890a-46a0-836f-95e268c26411"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{BASE_URL}}/vehicle/{{VEHICLE_ID}}",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"vehicle",
+								"{{VEHICLE_ID}}"
+							]
+						},
+						"description": "Generated from cURL: curl --location --request PUT 'http://localhost:5000/api/users/USER_ID_HERE' \\\n--header 'Content-Type: application/json' \\\n--data-raw '{\n    \"username\": \"john_updated\",\n    \"email\": \"john_updated@example.com\",\n    \"fullname\": \"John Updated\",\n    \"name\": \"Johnny\",\n    \"postal_code\": \"654321\",\n    \"contact_no\": \"9876500000\",\n    \"profile\": \"https://example.com/profile-new.jpg\",\n    \"password\": \"NewPass@1234\",\n    \"type\": \"driver\",\n    \"terms_conditions\": true\n}'\n"
+					},
+					"response": []
+				},
+				{
+					"name": "Fetch All Vehicle",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "authorization",
+								"value": "{{TOKEN}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{BASE_URL}}/vehicle?user=&search=&page=&limit=&weight=2000",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"vehicle"
+							],
+							"query": [
+								{
+									"key": "user",
+									"value": ""
+								},
+								{
+									"key": "search",
+									"value": ""
+								},
+								{
+									"key": "page",
+									"value": ""
+								},
+								{
+									"key": "limit",
+									"value": ""
+								},
+								{
+									"key": "weight",
+									"value": "2000"
+								}
+							]
+						},
+						"description": "Generated from cURL: curl --location --request GET 'http://localhost:5000/api/users'\n"
+					},
+					"response": []
+				},
+				{
+					"name": "Fetch Single Vehicle",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "authorization",
+								"value": "{{TOKEN}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{BASE_URL}}/vehicle/{{VEHICLE_ID}}",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"vehicle",
+								"{{VEHICLE_ID}}"
+							]
+						},
+						"description": "Generated from cURL: curl --location --request GET 'http://localhost:5000/api/users/USER_ID_HERE'\n"
+					},
+					"response": []
+				},
+				{
+					"name": "Fetch Document By Vehicle ID",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "authorization",
+								"value": "{{TOKEN}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{BASE_URL}}/vehicle/documents/{{VEHICLE_ID}}",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"vehicle",
+								"documents",
+								"{{VEHICLE_ID}}"
+							]
+						},
+						"description": "Generated from cURL: curl --location --request GET 'http://localhost:5000/api/users/USER_ID_HERE'\n"
+					},
+					"response": []
+				},
+				{
+					"name": "Delete vehicle",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "authorization",
+								"value": "{{TOKEN}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{BASE_URL}}/vehicle/{{VEHICLE_ID}}",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"vehicle",
+								"{{VEHICLE_ID}}"
+							]
+						},
+						"description": "Generated from cURL: curl --location --request DELETE 'http://localhost:5000/api/users/USER_ID_HERE'\n"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Vehicle Document",
+			"item": [
+				{
+					"name": "Create Vehicle Document",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{TOKEN}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "vehicle_id",
+									"value": "{{VEHICLE_ID}}",
+									"type": "text"
+								},
+								{
+									"key": "doc_no",
+									"value": "DL56ID45678",
+									"type": "text"
+								},
+								{
+									"key": "doc_front_image",
+									"type": "file",
+									"src": "postman-cloud:///1f00c04a-890a-46a0-836f-95e268c26411"
+								},
+								{
+									"key": "doc_back_image",
+									"type": "file",
+									"src": "postman-cloud:///1eff46fd-ad2f-43e0-8158-4e746a158d27"
+								},
+								{
+									"key": "expiry_date",
+									"value": "2025-11-06",
+									"type": "text"
+								},
+								{
+									"key": "document_type",
+									"value": "driving_licence",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{LIVE_BASE_URL}}/vehicle_document",
+							"host": [
+								"{{LIVE_BASE_URL}}"
+							],
+							"path": [
+								"vehicle_document"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Vehicle Document",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{TOKEN}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "doc_no",
+									"value": "DL56AD4568",
+									"type": "text"
+								},
+								{
+									"key": "doc_front_image",
+									"type": "file",
+									"src": "postman-cloud:///1eff1bd3-5b45-4b60-9fba-4e8b3977b95d"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{BASE_URL}}/vehicle_document/{{VEHICLE_DOCUMENT_ID}}",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"vehicle_document",
+								"{{VEHICLE_DOCUMENT_ID}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Document Approval Rejected",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{ADMIN_TOKEN}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "note",
+									"value": "image not clear",
+									"type": "text"
+								},
+								{
+									"key": "is_approved",
+									"value": "false",
+									"type": "text"
+								},
+								{
+									"key": "approved_status",
+									"value": "rejected",
+									"type": "text"
+								},
+								{
+									"key": "approved_notification",
+									"value": "1",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{BASE_URL}}/vehicle_document/{{VEHICLE_DOCUMENT_ID}}",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"vehicle_document",
+								"{{VEHICLE_DOCUMENT_ID}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Fetch Vehicles Document",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{TOKEN}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{BASE_URL}}/vehicle_document?search=&page=&limit=",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"vehicle_document"
+							],
+							"query": [
+								{
+									"key": "search",
+									"value": ""
+								},
+								{
+									"key": "page",
+									"value": ""
+								},
+								{
+									"key": "limit",
+									"value": ""
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Single Vehicle Document",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{TOKEN}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{BASE_URL}}/vehicle_document/{{VEHICLE_DOCUMENT_ID}}",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"vehicle_document",
+								"{{VEHICLE_DOCUMENT_ID}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Vehicle Document",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{TOKEN}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{BASE_URL}}/vehicle_document/{{VEHICLE_DOCUMENT_ID}}",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"vehicle_document",
+								"{{VEHICLE_DOCUMENT_ID}}"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Material Boxes",
+			"item": [
+				{
+					"name": "Create Material Box",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{TOKEN}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "Standard Box",
+									"type": "text"
+								},
+								{
+									"key": "weight",
+									"value": "5",
+									"type": "text"
+								},
+								{
+									"key": "box_image",
+									"type": "file",
+									"src": "postman-cloud:///1f0462a1-a12d-4d20-9e54-010e6e411229"
+								},
+								{
+									"key": "type",
+									"value": "Wooden Block",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{BASE_URL}}/material_box",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"material_box"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Fetch Material Boxes",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "{{TOKEN}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{BASE_URL}}/material_box?page=1&limit=10&search=standard",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"material_box"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "1"
+								},
+								{
+									"key": "limit",
+									"value": "10"
+								},
+								{
+									"key": "search",
+									"value": "standard"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Fetch Material Box",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "{{TOKEN}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{BASE_URL}}/material_box/{{MATERIAL_BOX_ID}}",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"material_box",
+								"{{MATERIAL_BOX_ID}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Material Box",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{TOKEN}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "Updated Box",
+									"type": "text"
+								},
+								{
+									"key": "weight",
+									"value": "6",
+									"type": "text"
+								},
+								{
+									"key": "type",
+									"value": "Wooden Block",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{BASE_URL}}/material_box/{{MATERIAL_BOX_ID}}",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"material_box",
+								"{{MATERIAL_BOX_ID}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Material Box",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "{{TOKEN}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{BASE_URL}}/material_box/{{MATERIAL_BOX_ID}}",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"material_box",
+								"{{MATERIAL_BOX_ID}}"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "BASE_URL",
+			"value": "http://localhost:5465",
+			"type": "string"
+		},
+		{
+			"key": "ADMIN_TOKEN",
+			"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4MzE5MTdmODZjZGYwNmFmZjVjMjNhOSIsImVtYWlsIjoicGF3YW5AeW9wbWFpbC5jb20iLCJ0eXBlIjoiYWRtaW4iLCJpYXQiOjE3NDgwNzg5OTUsImV4cCI6MTc0ODE2NTM5NX0.vULApYJ_IwKJ2BXKWXhZIxkCBHF5FMOFRf3z3xuBtng",
+			"type": "string"
+		},
+		{
+			"key": "DRIVER_TOKEN",
+			"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4NjY1Yzc5MGM3MGQzODA4MWZhNDAwNyIsImVtYWlsIjoiam9obkB5b3BtYWlsLmNvbSIsInR5cGUiOiJkcml2ZXIiLCJpYXQiOjE3NTE1Mzg4MTksImV4cCI6MTc1MTYyNTIxOX0.f9JR13F6eI0V0gTLKL-4jrXqoyJgIlXziRzb4u0n-DM",
+			"type": "string"
+		},
+		{
+			"key": "TOKEN",
+			"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4MzE5NmZjOGU2MDRlZDMwNTliMWUyZSIsImVtYWlsIjoicmltYW5zaHVAeW9wbWFpbC5jb20iLCJ0eXBlIjoiY3VzdG9tZXIiLCJpYXQiOjE3NDg4ODM3MzgsImV4cCI6MTc0ODk3MDEzOH0.eSsUe2AGAoO3L3x-wBDr2sTa76I6errJ_Crzj0MFlU0",
+			"type": "string"
+		},
+		{
+			"key": "VEHICLE_ID",
+			"value": "68486dd07d9fcc1430899921",
+			"type": "string"
+		},
+		{
+			"key": "USER",
+			"value": "68482cd5f9cdf6e6af9b0cc8",
+			"type": "string"
+		},
+		{
+			"key": "VEHICLE_TYPE_ID",
+			"value": "68482f1cd7be4e3a404b2222",
+			"type": "string"
+		},
+		{
+			"key": "VEHICLE_DOCUMENT_ID",
+			"value": "68487efa3c0369468739070f",
+			"type": "string"
+		},
+		{
+			"key": "MATERIAL_BOX_ID",
+			"value": "68530415481e2b12342714c2",
+			"type": "string"
+		},
+		{
+			"key": "TRIP_ID",
+			"value": "68530503481e2b12342714cb",
+			"type": "string"
+		},
+		{
+			"key": "DRIVER_LOCATION_ID",
+			"value": "68665a5575cfe4406bfb2265",
+			"type": "string"
+		},
+		{
+			"key": "LIVE_BASE_URL",
+			"value": "https://api.chawlalogistics.xyz",
+			"type": "string"
+		}
+	]
+}
