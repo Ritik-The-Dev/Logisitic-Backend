@@ -1,0 +1,10 @@
+{
+    "version": 2,
+    "name": "native-server",
+    "builds": [
+      { "dist": "app.js", "use": "@vercel/node" }
+    ],
+    "rewrites": [
+      { "source": "/(.*)", "destination": "/dist/app.js" }
+    ]
+  }
